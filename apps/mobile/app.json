@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "name": "Stampede",
+    "slug": "stampede-mobile",
+    "scheme": "stampede",
+    "plugins": ["expo-router"],
+    "extra": {
+      "supabaseUrl": "${EXPO_PUBLIC_SUPABASE_URL}",
+      "supabaseAnonKey": "${EXPO_PUBLIC_SUPABASE_ANON_KEY}"
+    }
+  }
+}
