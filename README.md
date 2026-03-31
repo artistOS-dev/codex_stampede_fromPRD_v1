@@ -208,6 +208,22 @@ What to do:
 3. Keep `vercel.json` minimal (no `outputDirectory` override for Next.js).
 4. If build still fails, check the first real `Error:` line after the warning; that line is the actionable failure.
 
+
+### If Vercel fails with `ERR_PNPM_META_FETCH_FAIL`
+
+If logs show:
+
+```text
+ERR_PNPM_META_FETCH_FAIL ... Value of "this" must be of type URLSearchParams
+```
+
+use **npm on Vercel** instead of pnpm for this repo deployment (already configured in `vercel.json`):
+
+- Install command: `npm install`
+- Build command: `npm run build:web:vercel`
+
+This bypasses transient pnpm metadata fetch/runtime issues in some Vercel environments.
+
 ## 7) Production checklist
 
 - [ ] Vercel deployment is green.
